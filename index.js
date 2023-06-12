@@ -74,10 +74,11 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.listen(3002, async () => {
+let port = 3000
+app.listen(port, async () => {
   await mongoose.connect(
     "mongodb+srv://somansh:somansh@cluster1.7pbk3q3.mongodb.net/"
   );
   console.log("Mongodb connected");
-  console.log("server started running on port", 3000);
+  console.log("server started running on port", port);
 });
